@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UltraBook Pro X - Oferta Especial</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            padding: 8rem 1rem 4rem;
+            color: white;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #3498db;
+        }
+
+        .price-tag {
+            font-size: 2.5rem;
+            color: #dc3545;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: #6c757d;
+            font-size: 1.5rem;
+        }
+
+        .countdown {
+            background-color: #f8f9fa;
+        }
+
+        .countdown-timer {
+            font-size: 2rem;
+            color: #dc3545;
+            font-weight: bold;
+        }
+
+        .feature-card {
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Dennis Mancilla</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Características</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#product">Producto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonios</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">UltraBook Pro X</h1>
+            <p class="lead mb-4">Potencia y rendimiento sin límites a un precio increíble</p>
+            <button class="btn btn-danger btn-lg" onclick="scrollToProduct()">
+                ¡Ver Oferta Especial!
+            </button>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 feature-card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-rocket feature-icon mb-3"></i>
+                            <h3 class="card-title">Rendimiento Superior</h3>
+                            <p class="card-text">Procesador Intel® Core™ i9 de última generación</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 feature-card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-gamepad feature-icon mb-3"></i>
+                            <h3 class="card-title">Gráficos Potentes</h3>
+                            <p class="card-text">NVIDIA RTX 4080 con 16GB GDDR6X</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 feature-card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-bolt feature-icon mb-3"></i>
+                            <h3 class="card-title">Velocidad Extrema</h3>
+                            <p class="card-text">SSD NVMe de 2TB y 32GB RAM DDR5</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section id="product" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img src="https://m.media-amazon.com/images/I/71m+cUutLgL.jpg" alt="UltraBook Pro X" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="mb-4">UltraBook Pro X - Edición Especial</h2>
+                    <div class="mb-4">
+                        <span class="original-price">$2,999</span>
+                        <div class="price-tag">$1,999</div>
+                    </div>
+                    <ul class="list-group mb-4">
+                        <li class="list-group-item">
+                            <i class="fas fa-check text-success me-2"></i>Pantalla 4K OLED 165Hz
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-check text-success me-2"></i>Intel® Core™ i9 13900H
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-check text-success me-2"></i>NVIDIA RTX 4080 16GB
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-check text-success me-2"></i>32GB RAM DDR5
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-check text-success me-2"></i>2TB SSD NVMe Gen4
+                        </li>
+                    </ul>
+                    <button class="btn btn-danger btn-lg" onclick="showPurchaseAlert()">
+                        ¡Comprar Ahora!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown -->
+    <section class="countdown py-5 text-center">
+        <div class="container">
+            <h3 class="mb-3">La oferta termina en:</h3>
+            <div class="countdown-timer" id="countdown"></div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <p class="card-text">
+                                <i class="fas fa-quote-left text-muted me-2"></i>
+                                La mejor laptop que he tenido. El rendimiento es increíble y la calidad de construcción es excelente.
+                            </p>
+                            <footer class="blockquote-footer mt-2">
+                                Carlos R.
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <p class="card-text">
+                                <i class="fas fa-quote-left text-muted me-2"></i>
+                                Perfecta para gaming y trabajo profesional. La batería dura todo el día.
+                            </p>
+                            <footer class="blockquote-footer mt-2">
+                                Ana M.
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <p class="card-text">
+                                <i class="fas fa-quote-left text-muted me-2"></i>
+                                La pantalla OLED es impresionante. Los colores son vibrantes y el contraste es perfecto.
+                            </p>
+                            <footer class="blockquote-footer mt-2">
+                                Luis G.
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-0">© 2024 Dennis Mancilla. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function scrollToProduct() {
+            document.getElementById('product').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function showPurchaseAlert() {
+            window.location.href = 'compra.html'
+        }
+
+        function updateCountdown() {
+            const now = new Date();
+            const end = new Date();
+            end.setHours(23, 59, 59);
+            
+            const diff = end - now;
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById('countdown').innerHTML = 
+                `${hours}h ${minutes}m ${seconds}s`;
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
